@@ -61,6 +61,16 @@ public class CommonResult<T>
         this.data = data;
     }
 
+    @Override
+    public String toString()
+    {
+        return "CommonResult{" +
+                "success=" + success +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
     public static <T> CommonResult<T> success()
     {
         return new CommonResult<T>(true,null,null);
