@@ -2,6 +2,7 @@ package com.lyx.common;
 
 /**
  * 通用返回数据
+ * @author 李艳兴
  */
 public class CommonResult<T>
 {
