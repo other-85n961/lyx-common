@@ -1,4 +1,4 @@
-package com.lyx;
+package com.lyx.common;
 
 import com.lyx.thrid.hutool.core.util.StrUtil;
 

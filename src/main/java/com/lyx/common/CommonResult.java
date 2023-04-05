@@ -1,4 +1,4 @@
-package com.lyx;
+package com.lyx.common;
 
 /**
  * 通用返回数据
