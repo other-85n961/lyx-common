@@ -1,6 +1,6 @@
 package com.lyx.common;
 
-import com.lyx.thrid.hutool.core.util.StrUtil;
+import com.lyx.common.util.LyxStrUtil;
 
 public class OptRuntimeException extends RuntimeException
 {
@@ -11,6 +11,6 @@ public class OptRuntimeException extends RuntimeException
 
     public static OptRuntimeException getInstance(CharSequence template, Object... params)
     {
-        return new OptRuntimeException(StrUtil.format(template, params));
+        return new OptRuntimeException(LyxStrUtil.format(template, params));
     }
 }
