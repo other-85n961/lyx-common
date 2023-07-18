@@ -1,4 +1,4 @@
-package com.lyx.common;
+package top.liyanxing.common;
 
 /**
  * 通用返回数据

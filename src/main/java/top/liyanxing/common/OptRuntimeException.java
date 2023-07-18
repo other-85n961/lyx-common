@@ -1,6 +1,6 @@
-package com.lyx.common;
+package top.liyanxing.common;
 
-import com.lyx.common.util.LyxStrUtil;
+import top.liyanxing.common.util.LyxStrUtil;
 
 public class OptRuntimeException extends RuntimeException
 {

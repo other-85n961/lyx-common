@@ -7,8 +7,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lyx</groupId>
-    <artifactId>lyx_common</artifactId>
+    <groupId>top.liyanxing</groupId>
+    <artifactId>lyx-common</artifactId>
     <version>1.0</version>
 
     <properties>

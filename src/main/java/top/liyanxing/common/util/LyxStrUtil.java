@@ -1,4 +1,4 @@
-package com.lyx.common.util;
+package top.liyanxing.common.util;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
