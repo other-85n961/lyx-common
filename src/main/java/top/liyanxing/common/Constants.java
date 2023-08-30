@@ -55,4 +55,40 @@ public interface Constants
             }
         }
     }
+
+    class VideoType
+    {
+        public static String MOV = "mov";
+
+        public static String MP4 = "mp4";
+
+        public static String FLV = "flv";
+
+        public static String AVI = "avi";
+
+        public static String WMV = "wmv";
+
+        public static String MKV = "mkv";
+
+        public static String M4V = "m4v";
+
+        public static final List<String> LIST;
+
+        static
+        {
+            Field[] fieldArr = ReflectUtil.getFields(ImgType.class, field -> field.getType().getName().equals(String.class.getTypeName()));
+            LIST = new ArrayList<>(fieldArr.length);
+            try
+            {
+                for (Field el : fieldArr)
+                {
+                    LIST.add((String) el.get(null));
+                }
+            }
+            catch (Exception e)
+            {
+                throw OptRuntimeException.getInstance(e);
+            }
+        }
+    }
 }

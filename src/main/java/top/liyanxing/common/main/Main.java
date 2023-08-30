@@ -11,7 +11,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        boolean img = Util.isImg("/Users/leeyx/Library/CloudStorage/Dropbox/电脑数据/收藏/03.隐私收藏/Ⅰ按专题/偷拍美女专题/3项及以上/C工作_040_2303.mp4");
-        Console.log("是图片：", img); // TODO 李艳兴 删除
+        Console.log(Constants.VideoType.LIST); // TODO 李艳兴 删除
     }
 }
