@@ -1,6 +1,6 @@
 package top.liyanxing.common;
 
-import top.liyanxing.common.util.LyxStrUtil;
+import cn.hutool.core.util.StrUtil;
 
 public class OptRuntimeException extends RuntimeException
 {
@@ -9,8 +9,18 @@ public class OptRuntimeException extends RuntimeException
         super(message);
     }
 
+    private OptRuntimeException(Throwable cause)
+    {
+        super(cause);
+    }
+
     public static OptRuntimeException getInstance(CharSequence template, Object... params)
     {
-        return new OptRuntimeException(LyxStrUtil.format(template, params));
+        return new OptRuntimeException(StrUtil.format(template, params));
+    }
+
+    public static OptRuntimeException getInstance(Throwable cause)
+    {
+        return new OptRuntimeException(cause);
     }
 }
