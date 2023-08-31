@@ -76,7 +76,7 @@ public interface Constants
 
         static
         {
-            Field[] fieldArr = ReflectUtil.getFields(ImgType.class, field -> field.getType().getName().equals(String.class.getTypeName()));
+            Field[] fieldArr = ReflectUtil.getFields(VideoType.class, field -> field.getType().getName().equals(String.class.getTypeName()));
             LIST = new ArrayList<>(fieldArr.length);
             try
             {
