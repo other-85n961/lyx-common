@@ -1,5 +1,7 @@
 package top.liyanxing.common;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  * 通用返回数据
  * @author 李艳兴
@@ -37,29 +39,14 @@ public class CommonResult<T>
         return success;
     }
 
-    public void setSuccess(Boolean success)
-    {
-        this.success = success;
-    }
-
     public String getMsg()
     {
         return msg;
     }
 
-    public void setMsg(String msg)
-    {
-        this.msg = msg;
-    }
-
     public T getData()
     {
         return data;
-    }
-
-    public void setData(T data)
-    {
-        this.data = data;
     }
 
     @Override
@@ -77,23 +64,13 @@ public class CommonResult<T>
         return new CommonResult<T>(true,null,null);
     }
 
-    public static <T> CommonResult<T> successMsg(String msg)
-    {
-        return new CommonResult<T>(true, msg, null);
-    }
-
     public static <T> CommonResult<T> successData(T data)
     {
         return new CommonResult<T>(true,null,data);
     }
 
-    public static <T> CommonResult<T> successMsgData(String msg, T data)
+    public static <T> CommonResult<T> errorMsg(CharSequence template, Object... params)
     {
-        return new CommonResult<T>(true,msg,data);
-    }
-
-    public static <T> CommonResult<T> errorMsg(String msg)
-    {
-        return new CommonResult<T>(false, msg, null);
+        return new CommonResult<T>(false, StrUtil.format(template, params), null);
     }
 }
